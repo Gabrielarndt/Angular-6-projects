@@ -1,0 +1,48 @@
+<style>
+    .btn-3d {
+        background-color: black;
+        color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-3d:hover {
+        background-color: #333;
+    }
+</style>
+<div class="container">
+    <h1 class="text-center">Cadastro de contatos</h1>
+    <form #f="ngForm" (ngSubmit)="gravar(f.value)" class="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control" ngModel required>
+                <div class="invalid-feedback">
+                    Por favor, digite um nome válido.
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" ngModel required>
+                <div class="invalid-feedback">
+                    Por favor, digite um email válido.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="fone">Telefone</label>
+                <input type="text" name="fone" id="fone" class="form-control" ngModel required>
+                <div class="invalid-feedback">
+                    Por favor, digite um telefone válido.
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 mb-3 text-center">
+                <button type="submit" class="btn btn-3d">Salvar</button>
+                <label>{{msg}}</label>
+            </div>
+        </div>
+    </form>
+</div>

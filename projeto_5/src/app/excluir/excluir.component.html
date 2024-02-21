@@ -1,0 +1,10 @@
+<div class="container">
+    <form>
+        <h1>Confirmar exclusão?</h1>
+        <p>{{contato.id}}</p>
+        <p>{{contato.nome}}</p>
+        <p>{{contato.email}}</p>
+        <p>{{contato.fone}}</p>
+        <button class="btn btn-primary" (click)="excluir(contato.id)">Excluir</button>
+    </form>
+</div>

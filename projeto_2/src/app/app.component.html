@@ -1,0 +1,23 @@
+<div>
+  <h1>Bem vindo ao campo de cadastro de contato</h1>
+  <table class="table table-striped">
+    <thead table-success>
+      <tr class="bg-success">
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ct of lista">
+        <td>{{ct.nome}}</td>
+        <td>{{ct.email}}</td>
+        <td><button (click)="excluir(ct)">excluir</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <form #f="ngForm" (ngSubmit)="salvar(f.value)">
+    <input type="text" placeholder="Informe seu nome" ngModel name="nome">
+    <input type="text" placeholder="Informe seu email" ngModel name="email">
+    <button>Salvar</button>
+  </form>
+</div>

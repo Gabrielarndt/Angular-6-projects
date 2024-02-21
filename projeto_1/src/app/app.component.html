@@ -1,0 +1,33 @@
+<div>
+  <h1>Hello world</h1>
+  <hr>
+  <button (click)="Ola()">{{ola}}</button>
+  <p>Interpolação: {{ msg }}</p>
+
+  <button (click)="showHide()">{{ rotulo }}</button>
+  <label>Property bind</label>
+  <button [hidden]="esconde">outro</button>
+  <input type="text" [value]="nome" />
+
+  <hr>
+  <h2>Lista de desejos</h2>
+  <table class="table table-striped">
+    <thead table-success>
+      <tr class="bg-success">
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ct of lista">
+        <td>{{ct.nome}}</td>
+        <td>{{ct.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <form #f="ngForm" (ngSubmit)="salvar(f.value)">
+    <input type="text" placeholder="Informe nome" ngModel name="nome">
+    <input type="text" placeholder="Informe email" ngModel name="email">
+    <button>Salvar</button>
+  </form>

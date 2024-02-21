@@ -1,0 +1,10 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Joana",
+      "email": "maria@gmail.com",
+      "fone": "(47)999-0987"
+    }
+  ]
+}
